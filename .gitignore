@@ -1,0 +1,53 @@
+# 依赖
+node_modules/
+package-lock.json.bak
+
+# 构建产物
+dist/
+dist-*/
+!dist/.gitkeep
+.verification/
+
+# 测试/审核临时产物
+verification/
+.oil-ui/
+.cache/
+*.log
+
+# 游戏本体与素材（绝不入库）
+public/games/*
+!public/games/.gitkeep
+public/covers/
+public/covers-card/
+public/thumbs/
+# 由 npm install 的 postinstall 从官方 npm 包复制，不入库
+public/ruffle/
+*.swf
+*.swf.data
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Toy 上传包
+dist-packages/
+*.zip
+
+# 本地环境/系统
+.env.local
+.env.*.local
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 项目私有过程资料（开发记录已脱敏进 docs/）
+.workbuddy/
+FlashToy_V1_0_开发方案/
+flash-time-machine/
+content/下载接入清单.csv
+content/实测结果.csv
+content/sources-manifest.json
+content/catalog.seed.json
+content/*.log
+.probe_result.csv
+.toy-sdk.tmp.js

@@ -1,0 +1,21 @@
+Flash 时光机（框架版）— 第三方组件声明
+
+1) Ruffle — https://ruffle.rs/
+   版本：0.8.0（npm 包 @ruffle-rs/ruffle）
+   许可：MIT OR Apache-2.0
+   随附许可证全文：public/licenses/LICENSE_MIT.md、public/licenses/LICENSE_APACHE.md
+   说明：项目仅自托管其官方 selfhosted 构建产物（ruffle.js + wasm），未修改源码。
+
+2) B 站 Toy JS SDK — https://www.bilibili.com/
+   许可：平台方所有
+   使用方式：index.html 通过 CDN script 引入，本项目不 vendored、不修改、
+   不在仓库中保存其源码副本。src/sdk/toy.ts 只是对 window.toy 的薄封装。
+
+3) 开发工具（不随发布产物分发）
+   - Vite 6      — MIT
+   - TypeScript 5.8 — Apache-2.0
+   - Playwright  — Apache-2.0
+   具体许可见各自的 npm 包 LICENSE 文件。
+
+本仓库不含任何 Flash 游戏本体、封面截图或第三方游戏素材。
+接入游戏前请自行确认对应作品的授权状态。

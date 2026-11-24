@@ -1,0 +1,33 @@
+{
+  "name": "flash-rewind-framework",
+  "version": "1.0.0",
+  "description": "Flash 时光机框架 - 自托管 Ruffle 加载器 + B站 Toy 适配（不含游戏本体）",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<your-name>/flash-rewind.git"
+  },
+  "keywords": ["ruffle", "flash", "swf", "bilibili-toy", "emulator"],
+  "scripts": {
+    "postinstall": "node scripts/setup-ruffle.mjs",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "build:preview": "npm run build && node scripts/preview-swf-ext.mjs",
+    "pack": "npm run build && python scripts/pack_package.py",
+    "build:noimg": "node scripts/build-noimg.mjs",
+    "pack:noimg": "node scripts/build-noimg.mjs && python scripts/pack_package.py --dist=dist-noimg --tag=noimg",
+    "pack:batch": "node scripts/build-batch.mjs",
+    "pack:check": "node scripts/verify_package.mjs dist-packages/_check",
+    "preview": "vite preview",
+    "check:cap": "python scripts/capacity_check.py ./dist"
+  },
+  "dependencies": {
+    "@ruffle-rs/ruffle": "0.8.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0",
+    "typescript": "^5.8.0",
+    "vite": "^6.0.0"
+  }
+}
