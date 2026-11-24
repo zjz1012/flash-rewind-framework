@@ -160,6 +160,12 @@ a { color: var(--mint); }
 .about-story { margin: 16px 0 4px; color: #c6d4ea; font-size: 13px; line-height: 1.9; }
 .about-story p { margin: 0 0 10px; }
 .about-story b { color: var(--mint); }
+.oss-credit { margin-top: 18px; padding-top: 12px; border-top: 1px solid #2c3d59; color: #8296b1; font-size: 11px; line-height: 1.7; }
+.oss-credit .oss-head { color: var(--gold); font-size: 10px; letter-spacing: .5px; margin-bottom: 5px; }
+.oss-credit p { margin: 0 0 5px; }
+.oss-credit b { color: var(--mint); font-weight: 600; }
+.oss-credit a { color: var(--mint); word-break: break-all; text-decoration: none; }
+.oss-credit a:hover { text-decoration: underline; }
 .disclaimer { margin-top: 18px; padding-top: 12px; border-top: 1px solid #2c3d59; color: #8296b1; font-size: 11px; line-height: 1.7; }
 .pill { display: inline-block; margin: 3px 5px 3px 0; padding: 4px 9px; border-radius: 999px; background: #223550; color: #c8d9f0; font-size: 10px; }
 .dialog-actions { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }

@@ -131,8 +131,11 @@ node scripts/verify_toy_sdk.mjs        # Toy SDK 门禁桩
 
 ## 7. 许可与素材边界
 
-- 框架代码：MIT（见 `LICENSE`）。
+- 框架代码：MIT（见 `LICENSE`），项目地址 <https://github.com/zjz1012/flash-rewind-framework>。
 - Ruffle：MIT OR Apache-2.0，随附双许可见 `NOTICE` 与 `public/licenses/`。
 - Toy SDK：B 站平台提供，本项目只通过 CDN 引用，不 vendored、不修改。
 - **游戏 SWF / 封面截图 / 宣传片素材均不在本仓库**，接入第三方游戏前请自行确认授权。
 - `docs/DEVLOG.md` 记录的是工程过程与平台适配经验，不含任何第三方游戏文件。
+
+应用内「关于」弹窗会展示上面的项目地址与许可摘要，与本节、`LICENSE`、`NOTICE` 三处保持一致。
+fork 后可用 `VITE_PROJECT_URL` 环境变量把弹窗里的地址换成自己的仓库，避免代码里出现与许可文件不一致的链接。

@@ -1,5 +1,9 @@
 Flash 时光机（框架版）— 第三方组件声明
 
+0) 本项目（框架代码）— https://github.com/zjz1012/flash-rewind-framework
+   许可：MIT（见 LICENSE）
+   应用内「关于」弹窗展示同一地址与许可摘要，fork 可用 VITE_PROJECT_URL 覆盖。
+
 1) Ruffle — https://ruffle.rs/
    版本：0.8.0（npm 包 @ruffle-rs/ruffle）
    许可：MIT OR Apache-2.0

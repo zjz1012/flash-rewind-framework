@@ -22,6 +22,12 @@ const app = document.querySelector<HTMLDivElement>('#app')!;
 /** 游戏库：全部已收录游戏（内部审核状态不展示给玩家） */
 const GAME_COUNT = releasedGames.length;
 
+/**
+ * 开源框架仓库与许可摘要（在「关于」里展示，便于追溯许可来源）。
+ * 可用 VITE_PROJECT_URL 改成自己的 fork 地址。
+ */
+const OSS_REPO_URL = String(import.meta.env.VITE_PROJECT_URL || 'https://github.com/zjz1012/flash-rewind-framework');
+
 let state: PersistState;
 let route: { page: string; id?: string } = { page: 'home' };
 let uiState = { nav: 'all', chip: '全部', q: '' };
@@ -675,6 +681,11 @@ function openAbout() {
       <div><b✦ 随手收藏</b>喜欢的游戏收进收藏<br>下次打开还在</div>
       <div><b⬆ 导入自己的</b>把你的 SWF 带进来<br>一起放进游戏库</div>
       <div><b♡ 安静陪伴</b>打开即玩，专注游戏本身<br>不打扰，只陪你玩</div>
+    </div>
+    <div class="oss-credit">
+      <div class="oss-head">开源与许可</div>
+      <p>本框架以 <b>MIT</b> 许可开源，播放器内核 Ruffle 采用 <b>MIT OR Apache-2.0</b> 双许可。</p>
+      <p>项目地址：<a href="${OSS_REPO_URL}" target="_blank" rel="noopener">${OSS_REPO_URL}</a></p>
     </div>
     <div class="disclaimer">本 Toy 收录的 Flash 小游戏版权归各自权利人所有。如权利人认为使用方式不妥，欢迎联系我们，我们会尽快核实并移除。</div>`;
   document.querySelector('#overlay')?.classList.add('open');
